@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Signstyle.css">
+    <script src="https://kit.fontawesome.com/a442f072cc.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=jo4FBRpnaZEesyHRlOcancslBd4V_gOSz469eH2paofCKKVAZv6RvZu6BsRA8gMx0RC-_0mAroQ1AeI_wf2kkcsVqm0J6hQ-xBoZ732jISS_lAG-MvIRLdKN3Kobjie_Gr7P4iGoyyW78P8n4Bwq5PCKvYqqFUo9VclkBMTB7GNnTgT1PNjZgT1aN5sFhYwLEK0u5W3h3HocC6zNXo4eFJ5uwWFmppfHfgDxjLMiD_tv1iUUl7tgQr0CyaJ7i_wmhE3ETrHA0IidjLbPUB5qy_QaiMxD8nYbQ3wcngWNhZ79m6d2fZCS2bJxmEWMMNIUW4t8p8nN-1sVFT-7iy2Yu2Vcpe25FOX29HpgJxzdeU9av_L7XWUbt8QuhXXP_3Zxt97WOpXE9_MROFYAZv9sQ7P8EzkpVCBWnSBUlchlBlCxdsh63tAIbUyoqwY-ezfckHooZh6VzYBOQq3ffQDDeCZKLtXw6wg8ufqB5XlXwWJ1IZT3tszNgSX0Cexz4MTTOOtOf8mQDgJZYt2No9pdCn40kQXhgaNYhwkRzwZeCTgTKDk4JmGnyQgsI-wALdLniV7ZgaZAfkIQcVxaLkHOyJcyDVVUjcljLtnBEzE6kjknhmo7D2R7LtCJf_nrD2-JlcODrERlzdYQzO9Sld6xy5cddjV9uBiRW4eSklwLbjvukGFVyE7TF1UKbFbqqEMl17kcpt9-iKwy40ygw_FUSh-f6UmGrZPWSr4bg-Rh4eveEsv1O-TPcMU8pDYmNP99aGwZV4ITXyrnhZC_5rKrMIc2JXHBgf_oJGcE0XOPECmT2RcHtlm1bk_ZzY1YImhSa-AEBk2YvUA8eAapugpPC6o5uilBE6romDL63wbtsV17JPvBQWDl7i2ot9QF3wEsmbraIK-3SgutFa7RNABPcGgkGNv8lqK_qaSBEw4rVDU1EwUZhzx2Ivz68WvqNqM-4YzlQjP-udM7_BVsSDMkyOh5ze4ELFhVSbZbtluQNHoxsbpREVlc1eMn1rmG6_t0EhGJa5qjSIDB9oYlntJVPhoH1OZ9Ar6ymeFI4_PsgRsuNOw6Qud7r9oI0F9uVkTQ_xLYPGPUlMlINmOq_Jo5iTCgT6OCuCnhZeNZkahA4SzBoST5qVnmvXWTh0cbEDys08Ahd3l-mfwTZMv5MK2GIUIAvvlEdqUTl6Ls8yaLiJGNykJmybts7_BADJMCSMHqONb_x5P3cU4TUueEWJDPVWQtvtKnUB4JoQP6EaZlTPCZV2TtrlnB8FdIhDQW4aDLiP6OLJyKrijMpzxwcOFfrKiId3HxaIi9x_DrRsFrdAF6ih9DlKEnAttPnTj1vPnVN2m_o8j5lDQxDuXtKlKIyyxISgyuL7m2tDIB21KgJM6_PYitz5sMFxqA7lz6JysZv3kGNp4pCqo2O9-HJnbDvjaY55LIhZSUjT7hpoMXOxde9jUyo4kUN-E4eMWoqptUiZ9lK2SKcAfMgSBlmCCoyIptSduFRfTveXbeV53Jl6r3_lqAG25oKyzkOaQaMLPcevO0m3OhzDYck_6ufpNq_etzuWWvFPCX3RoJqh0gEd_nGjcWkUBqvFwIsqvgrZ0A2DHkSpKgOXmSNET2uAaTFA" nonce="4cfc1c5c431db7ea5726cda9e033b67c" charset="UTF-8"></script><script src="https://kit.fontawesome.com/a442f072cc.js" crossorigin="anonymous"></script>
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+    <title>Signup</title>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    
+</head>
+<body>
+    
+    <section class="container forms">
+           
+        
+        <!-- Signup Form -->
+
+        <div class="form signup">
+            <div class="form-content">
+                <header>Signup</header>
+                <form action="#"  id="app" @submit="checkForm">
+                    <p v-if="errors.length">
+    <b>Please correct the following error(s):</b>
+    <ul>
+      <li v-for="error in errors">{{ error }}</li>
+    </ul>
+  </p>
+                    <div class="field input-field">
+                        <input type="text" placeholder="Name" class="input" v-model="name">
+                    </div>
+                    <div class="field input-field">
+                        <input type="email" placeholder="Email" class="input" v-model="email">
+                    </div>
+                    
+                    <div class="field input-field">
+                        <input type="password" placeholder="Password" class="password" v-model="password">
+                        
+                    </div>
+                    <div class="field input-field">
+                        <input type="number" placeholder="Phone Number" class="input" v-model="number">
+                    </div>
+
+                  
+                    
+                    <div class="field input-field" id="prf">
+                        <p id="txt">Profile Picture<i class="fa-solid fa-image"></i>:</p>
+                        
+                        <input type="file" accept=".jpg,.png" class="input" id="accept">
+                        
+                        
+                    </div>
+
+                    <div class="field button-field">
+                         <button type="submit">Signup</button>
+                    </div>
+                </form>
+
+                <div class="form-link">
+                    <span>Already have an account? <a href="index.html" class="link login-link">Login</a></span>
+                </div>
+            </div>
+
+           
+        </div>
+    </section>
+    <script>
+ const app = new Vue({
+  el: '#app',
+  data: {
+    errors: [],
+    name: null,
+    number: null,
+    email: null,
+    password:null
+  },
+  methods:{
+    checkForm: function (e) {
+      if (this.name && this.number && this.email && this.password) {
+        return true;
+      }
+
+      this.errors = [];
+
+      if (!this.name) {
+        this.errors.push('Name required.');
+      }
+      if (!this.number) {
+        this.errors.push('phonenumber required.');
+      }
+      if (!this.email) {
+        this.errors.push('email required.');
+      }
+      if (!this.password) {
+        this.errors.push('password required.');
+      }
+
+      e.preventDefault();
+    }
+  }
+})
+    </script>
+</body>
+</html>
